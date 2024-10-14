@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_item_form" model="ir.ui.view">
+        <field name="name">blueprint.item.form</field>
+        <field name="model">blueprint.item</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="category"/>
+                        <field name="subcategory"/>
+                        <field name="equation_id"/>
+                        <field name="calculated_value"/>
+                    </group>
+                    <notebook>
+                        <page string="Measurements">
+                            <field name="measurement_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_item_tree" model="ir.ui.view">
+        <field name="name">blueprint.item.tree</field>
+        <field name="model">blueprint.item</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="subcategory"/>
+                <field name="calculated_value"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_item" model="ir.actions.act_window">
+        <field name="name">Takeoff Items</field>
+        <field name="res_model">blueprint.item</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

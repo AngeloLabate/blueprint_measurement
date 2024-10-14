@@ -1,0 +1,17 @@
+.pdf-viewer {
+    .pdf-page {
+        border: 1px solid #ccc;
+        margin: 10px;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        line-height: 100px;
+        font-size: 18px;
+        color: #666;
+        background-color: #f9f9f9;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+}

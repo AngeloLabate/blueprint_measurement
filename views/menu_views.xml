@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_blueprint_root" name="Blueprint Measurement" sequence="10"/>
+
+    <menuitem id="menu_blueprint" name="Blueprints" parent="menu_blueprint_root" action="action_blueprint" sequence="10"/>
+    <menuitem id="menu_measurement" name="Measurements" parent="menu_blueprint_root" action="action_measurement" sequence="20"/>
+    <menuitem id="menu_item" name="Takeoff Items" parent="menu_blueprint_root" action="action_item" sequence="30"/>
+    <menuitem id="menu_equation" name="Equations" parent="menu_blueprint_root" action="action_equation" sequence="40"/>
+</odoo>

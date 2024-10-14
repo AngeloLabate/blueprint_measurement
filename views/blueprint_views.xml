@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_blueprint_form" model="ir.ui.view">
+        <field name="name">blueprint.blueprint.form</field>
+        <field name="model">blueprint.blueprint</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="pdf_file" widget="binary" filename="name"/>
+                        <field name="scale_factor"/>
+                        <field name="reference_dimension"/>
+                        <field name="page_count"/>
+                    </group>
+                    <notebook>
+                        <page string="PDF Viewer">
+                            <field name="pdf_data" invisible="1"/>
+                            <widget name="pdf_viewer" pdf_data="pdf_data"/>
+                        </page>
+                        <page string="Measurements">
+                            <field name="measurement_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_blueprint_tree" model="ir.ui.view">
+        <field name="name">blueprint.blueprint.tree</field>
+        <field name="model">blueprint.blueprint</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="scale_factor"/>
+                <field name="page_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_blueprint" model="ir.actions.act_window">
+        <field name="name">Blueprints</field>
+        <field name="res_model">blueprint.blueprint</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

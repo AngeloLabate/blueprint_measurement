@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_equation_form" model="ir.ui.view">
+        <field name="name">blueprint.equation.form</field>
+        <field name="model">blueprint.equation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="equation"/>
+                    </group>
+                    <notebook>
+                        <page string="Variables">
+                            <field name="variable_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="measurement_type"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_equation_tree" model="ir.ui.view">
+        <field name="name">blueprint.equation.tree</field>
+        <field name="model">blueprint.equation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="equation"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_equation" model="ir.actions.act_window">
+        <field name="name">Equations</field>
+        <field name="res_model">blueprint.equation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

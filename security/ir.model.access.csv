@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_blueprint_blueprint,access_blueprint_blueprint,model_blueprint_blueprint,base.group_user,1,1,1,1
+access_blueprint_measurement,access_blueprint_measurement,model_blueprint_measurement,base.group_user,1,1,1,1
+access_blueprint_item,access_blueprint_item,model_blueprint_item,base.group_user,1,1,1,1
+access_blueprint_equation,access_blueprint_equation,model_blueprint_equation,base.group_user,1,1,1,1
+access_blueprint_equation_variable,access_blueprint_equation_variable,model_blueprint_equation_variable,base.group_user,1,1,1,1
